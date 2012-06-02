@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SequeBeat.Common;
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,7 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
+// The Split App template is documented at http://go.microsoft.com/fwlink/?LinkId=234228
 
 namespace SequeBeat
 {
@@ -24,10 +26,10 @@ namespace SequeBeat
     sealed partial class App : Application
     {
         /// <summary>
-        /// Initializes the singleton application object.  This is the first line of authored code
+        /// Initializes the singleton Application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
-       public App()
+        public App()
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
@@ -39,16 +41,37 @@ namespace SequeBeat
         /// search results, and so forth.
         /// </summary>
         /// <param name="args">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs args)
+        protected override async void OnLaunched(LaunchActivatedEventArgs args)
         {
-            if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
+            // Do not repeat app initialization when already running, just ensure that
+            // the window is active
+            if (args.PreviousExecutionState == ApplicationExecutionState.Running)
             {
-                //TODO: Load state from previously suspended application
+                Window.Current.Activate();
+                return;
             }
 
-            // Create a Frame to act navigation context and navigate to the first page
+            // Create a Frame to act as the navigation context and associate it with
+            // a SuspensionManager key
             var rootFrame = new Frame();
-            rootFrame.Navigate(typeof(BlankPage));
+            SuspensionManager.RegisterFrame(rootFrame, "AppFrame");
+
+            if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
+            {
+                // Restore the saved session state only when appropriate
+                await SuspensionManager.RestoreAsync();
+            }
+
+            if (rootFrame.Content == null)
+            {
+                // When the navigation stack isn't restored navigate to the first page,
+                // configuring the new page by passing required information as a navigation
+                // parameter
+                if (!rootFrame.Navigate(typeof(ItemsPage), "AllGroups"))
+                {
+                    throw new Exception("Failed to create initial page");
+                }
+            }
 
             // Place the frame in the current Window and ensure that it is active
             Window.Current.Content = rootFrame;
@@ -62,9 +85,11 @@ namespace SequeBeat
         /// </summary>
         /// <param name="sender">The source of the suspend request.</param>
         /// <param name="e">Details about the suspend request.</param>
-        void OnSuspending(object sender, SuspendingEventArgs e)
+        private async void OnSuspending(object sender, SuspendingEventArgs e)
         {
-            //TODO: Save application state and stop any background activity
+            var deferral = e.SuspendingOperation.GetDeferral();
+            await SuspensionManager.SaveAsync();
+            deferral.Complete();
         }
     }
 }

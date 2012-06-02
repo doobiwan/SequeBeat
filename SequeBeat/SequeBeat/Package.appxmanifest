@@ -1,20 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
 
-  <Identity Name="ac147926-5874-49af-ad96-13d85a4f2fa8"
-            Publisher="CN=Craig"
+  <Identity Name="72ee03be-5e48-446a-ae62-256fd677121e"
+            Publisher="CN=VMUser"
             Version="1.0.0.0" />
 
   <Properties>
     <DisplayName>SequeBeat</DisplayName>
-    <PublisherDisplayName>Craig</PublisherDisplayName>
+    <PublisherDisplayName>VMUser</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
-    <Description>SequeBeat</Description>
   </Properties>
 
   <Prerequisites>
-    <OSMinVersion>6.2</OSMinVersion>
-    <OSMaxVersionTested>6.2</OSMaxVersionTested>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
   </Prerequisites>
 
   <Resources>
@@ -31,7 +30,7 @@
             SmallLogo="Assets\SmallLogo.png"
             Description="SequeBeat"
             ForegroundText="light"
-            BackgroundColor="#222222">
+            BackgroundColor="#464646">
             <DefaultTile ShowName="allLogos" />
             <SplashScreen Image="Assets\SplashScreen.png" />
         </VisualElements>
