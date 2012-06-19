@@ -6,8 +6,22 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">Seque Beat</x:String>
+    </Page.Resources>
 
     <Grid Background="{StaticResource ApplicationPageBackgroundBrush}">
+        <StackPanel HorizontalAlignment="Right" Height="204" Margin="24" VerticalAlignment="Bottom" Width="166">
+            <Button x:Name="btnLaunch" Content="New" HorizontalAlignment="Right" Width="100" Click="btnLaunch_Click"/>
+        </StackPanel>
+        <Grid Margin="0" VerticalAlignment="Top" Height="140">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}" Margin="40,0,40,40"/>
+        </Grid>
 
     </Grid>
 </Page>

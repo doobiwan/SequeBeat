@@ -1,0 +1,2 @@
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\PortableTest\PortableTest.csproj;neutral
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\SequeBeatJS.jsproj;neutral

@@ -34,5 +34,10 @@ namespace SequeBeat
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
+        private void btnLaunch_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SequePage));
+        }
     }
 }

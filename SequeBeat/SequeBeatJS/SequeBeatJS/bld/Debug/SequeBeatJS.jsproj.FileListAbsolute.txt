@@ -1,0 +1,17 @@
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bin\Debug\resources.pri
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bin\Debug\AppxManifest.xml
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bin\Debug\SequeBeatJS.build.appxrecipe
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bld\Debug\priconfig.xml
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bld\Debug\layout.resfiles
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bld\Debug\resources.resfiles
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bld\Debug\pri.resfiles
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bld\Debug\LanguageQualifiers.txt
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bld\Debug\ProjectArchitectures.txt
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bin\Debug\PortableTest.winmd
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bin\Debug\PortableTest.pdb
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bin\Debug\PortableTest.pri
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bld\Debug\SequeBeatJS.jsprojResolveAssemblyReference.cache
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bld\Debug\priconfig.xml.intermediate
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bld\Debug\layout.resfiles.intermediate
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bld\Debug\resources.resfiles.intermediate
+C:\Development\GitHub\SequeBeat\SequeBeat\SequeBeatJS\SequeBeatJS\bld\Debug\pri.resfiles.intermediate
